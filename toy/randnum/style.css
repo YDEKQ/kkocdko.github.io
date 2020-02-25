@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 14px;
+  background: rgb(248, 249, 250);
+}
+
+#console,
+#viewer {
+  height: 100%;
+  max-height: 500px;
+  margin: 7px;
+}
+
+#console {
+  width: 240px;
+  padding-top: 10px;
+}
+
+#viewer {
+  flex-grow: 1;
+  width: 1%;
+  max-width: 500px;
+}
+
+@media screen and (max-width: 550px) {
+  body {
+    flex-direction: column;
+  }
+
+  #console,
+  #viewer {
+    width: 100%;
+    max-width: unset;
+    height: unset;
+    max-height: unset;
+  }
+
+  #console {
+    height: 305px;
+  }
+
+  #viewer {
+    height: 1%;
+  }
+}
+
+#console label {
+  width: 100%;
+}
+
+#viewer .table-container {
+  overflow: auto;
+  height: 100%;
+  scrollbar-width: thin;
+}
+
+.buttons-bar {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+#numbers-list th,
+#numbers-list td {
+  width: 1%;
+}

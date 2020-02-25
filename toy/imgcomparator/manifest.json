@@ -1,0 +1,19 @@
+{
+  "name": "Images Comparator",
+  "short_name": "ImgComparator",
+  "description": "Find difference between images.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "rgb(248, 249, 250)",
+  "theme_color": "#0078d7",
+  "icons": [{
+      "src": "favicon.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

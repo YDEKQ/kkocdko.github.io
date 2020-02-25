@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/finnhvman/matter@0.2.2/dist/matter.min.css">
+  <!-- <link rel="stylesheet" href="/toy/public/matter.debug.min.css"> -->
+  <link rel="stylesheet" href="/toy/public/matter-plus.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="manifest" href="manifest.json">
+  <script>
+    navigator.serviceWorker.register('sw.js')
+
+  </script>
+  <!-- [material-design-icons](https://github.com/google/material-design-icons) -->
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="icon" href="favicon.svg">
+  <title>Image Converter</title>
+</head>
+
+<body>
+  <div id="console" class="matter-card-standard">
+    <label id="input-file" class="matter-button-contained">
+      添加文件
+      <input type="file">
+    </label>
+    <br>
+    <select id="convert-config-type">
+      <option value="image/jpeg 0.75">JPEG 格式 (75%质量)</option>
+      <option value="image/webp 0.75">WEBP 格式 (75%质量)</option>
+      <option value="image/png 1">PNG 格式（无损）</option>
+      <option value="image/jpeg 1" class="modify-quality">JPEG 格式 (自定义)</option>
+      <option value="image/webp 1" class="modify-quality">WEBP 格式 (自定义)</option>
+    </select>
+    <br>
+    <!-- 
+    <select id="convert-config-size">
+      <option value="1">原始大小</option>
+      <option value="preset 0.5">缩小至0.5倍</option>
+      <option value="1">自定义</option>
+    </select>
+    <br>
+     -->
+    <p>请点击“添加文件”按钮或拖拽图片文件到按钮上。</p>
+    <p>拖拽预览图片或右键“另存为”即可保存转换后的图片。</p>
+  </div>
+  <div id="viewer" class="matter-card-standard">
+    <img>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/finnhvman/matter@0.2.2/dist/matter.min.css">
+  <!-- <link rel="stylesheet" href="/toy/public/matter.debug.min.css"> -->
+  <link rel="stylesheet" href="/toy/public/matter-plus.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="manifest" href="manifest.json">
+  <script>
+    navigator.serviceWorker.register('sw.js')
+
+  </script>
+  <!-- [material-design-icons](https://github.com/google/material-design-icons) -->
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="icon" href="favicon.svg">
+  <title>Random Number Generator</title>
+</head>
+
+<body>
+  <div id="console" class="matter-card-standard">
+    <div class="config-box">
+      <label class="matter-textfield-standard">
+        <input id="config-minimum" value="1" placeholder=" " spellcheck="false">
+        <span>Minimum</span>
+      </label>
+      <br>
+      <br>
+      <label class="matter-textfield-standard">
+        <input id="config-maximum" value="100" placeholder=" " spellcheck="false">
+        <span>Maximum</span>
+      </label>
+      <br>
+      <br>
+      <label class="matter-textfield-standard">
+        <input id="config-quantity" value="1" placeholder=" " spellcheck="false">
+        <span>Quantity</span>
+      </label>
+    </div>
+    <div class="buttons-bar">
+      <button id="recreat-number-btn" class="matter-button-outlined">Recreat</button>
+      <button id="creat-number-btn" class="matter-button-contained">Creat</button>
+    </div>
+  </div>
+  <div id="viewer" class="matter-card-standard">
+    <div class="table-container">
+      <table id="numbers-list" class="matter-table-standard">
+        <thead>
+          <tr>
+            <th>Creat Time</th>
+            <th>Random Number</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="buttons-bar">
+      <button id="empty-list-btn" class="matter-button-contained">Empty</button>
+    </div>
+  </div>
+</body>
+
+</html>

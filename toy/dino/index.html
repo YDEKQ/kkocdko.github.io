@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="manifest" href="manifest.json">
+  <script>
+    navigator.serviceWorker.register('sw.js')
+
+  </script>
+  <!-- [material-design-icons](https://github.com/google/material-design-icons) -->
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="icon" href="favicon.svg">
+  <title>Dino</title>
+  <style>
+    body {
+      overflow: hidden;
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #runner-frame {
+      box-sizing: border-box;
+      padding: 7px;
+      padding-top: 5vh;
+      width: 100%;
+      height: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="runner-frame"></div>
+  <script src="//cdn.jsdelivr.net/gh/kkocdko/dino/dist/runner.min.js"></script>
+  <script>
+    const runner = new window.Runner('#runner-frame')
+
+  </script>
+</body>
+
+</html>
